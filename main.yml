@@ -35,6 +35,10 @@
       when: configure_ohmyzsh
 
   tasks:
+    - import_tasks: tasks/executable-scripts.yml
+      when: configure_executable_scripts
+      tags: ["executable-scripts"]
+
     - import_tasks: tasks/sudoers.yml
       when: configure_sudoers
       tags: ["sudoers"]

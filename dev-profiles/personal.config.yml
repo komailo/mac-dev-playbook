@@ -3,6 +3,8 @@ configure_dotfiles: false
 configure_terminal: false
 configure_osx: false
 
+configure_executable_scripts: true
+
 # See `geerlingguy.mac.mas` role documentation for usage instructions.
 mas_installed_apps: []
 mas_email: ""
@@ -10,6 +12,8 @@ mas_password: ""
 
 # homebrew configuration
 homebrew_cask_apps:
+  - betterdisplay
+  - chatgpt
   - docker
   - firefox
   - ghostty
@@ -18,10 +22,12 @@ homebrew_cask_apps:
   - handbrake
   - licecap
   - rectangle
+  - tigervnc-viewer
   - transmit
 
 homebrew_installed_packages:
-  # - ansible # Installed via Pip.
+  - ansible # Installed via Pip.
+  - codex
   - gh
   - git
   - go
@@ -87,6 +93,8 @@ zshconfig_aliases:
   lless: "less -N" # less a file with line numbers
 
   v: "vim"
+
+  reset-screen: "sudo killall -9 WindowServer" # Reset the screen (logs you out) need it for display reconfiguration
 
 # ohmyzsh configuration
 configure_ohmyzsh: true

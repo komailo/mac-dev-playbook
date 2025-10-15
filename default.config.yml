@@ -124,3 +124,5 @@ sublime_package_control:
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
+
+configure_executable_scripts: false
