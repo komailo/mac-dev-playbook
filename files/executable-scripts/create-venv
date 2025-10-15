@@ -2,6 +2,4 @@
 
 set -euo pipefail
 
-DIR_NAME=$(basename "$(pwd)")
-
-python -m "$DIR_NAME" .venv
+python3 -m venv .venv
